@@ -1,0 +1,6 @@
+Recursion exercises
+
+mergeSort
+
+4/25 I am having an issue with merge.  When two arrays of 2 numbers each are passed. It will function until the listIndex of one of them equals list.length then stop.  Even if there are unresolved numbers in an array.  The catch all for the orphan will catch one but still leave one not appearing.  It seems that once index equals list.length it wont push the item to mergedArray.  I found an issue with enclosing the else statement. addressing that helped... However, in the circumstance of left[13] right [1, 9] the first loop is correct [1] it doesnt iterate over l[0] r[1] rather it skips to the while capture orphans loop.  Why doesnt it iterate a second time? It seems it might have to do with l.length is 0 so perhaps the if statement is false, if that is the case why does it loop the first time? 
+4/26 It appears I have the two while orphan loops enclosed inside the main while loop. Removing them resolved the issue.
